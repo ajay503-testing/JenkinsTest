@@ -35,10 +35,13 @@ public class DecryptClass {
             decryptedPass= new String(decodedBytes);
         }*/
 
-     jenkinsSecretKey = generateSecretKey();
-    frameworkSecretKey = generateSecretKey();
+     /*jenkinsSecretKey = generateSecretKey();
+    frameworkSecretKey = generateSecretKey();*/
+        //jenkinsSecretKey = "gDbiuXZ0V3jzSqc5N5V5u3XvNqHex+LAmn/Lf7RWULU=";
+        frameworkSecretKey = "gDbiuXZ0V3jzSqc5N5V5u3XvNqHex+LAmn/Lf7RWULU=";
+        jenkinsSecretKey= System.getenv("secretKey");
 
-    System.out.println(jenkinsSecretKey);
+        System.out.println(jenkinsSecretKey);
     System.out.println(frameworkSecretKey);
         // Compare the secret keys
         if (compareSecretKeys(jenkinsSecretKey, frameworkSecretKey)) {
